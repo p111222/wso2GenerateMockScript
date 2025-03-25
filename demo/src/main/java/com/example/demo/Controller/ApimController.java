@@ -14,7 +14,7 @@ public class ApimController {
     @Autowired
     private ApiService apiService;
 
-    @PostMapping("/{apiId}/generate-mock-scripts")
+    @PostMapping("/generate-mock-scripts/{apiId}")
     public ResponseEntity<Map<String, Object>> generateMockScripts(@PathVariable String apiId) {
         return apiService.generateMockScripts(apiId);
     }
